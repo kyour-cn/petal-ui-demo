@@ -1,47 +1,24 @@
 <template>
-  <view class="content">
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
+    <view class="content">
+        <PuButton size="mini">开始体验</PuButton>
+        <PuButton size="small">开始体验</PuButton>
+        <PuButton :block="true" size="normal">开始体验</PuButton>
+        <PuButton :block="true" size="large">开始体验</PuButton>
     </view>
-  </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-    }
-  },
-  onLoad() {},
-  methods: {},
-}
+<script setup>
+
+import PuButton from "petal-ui/components/button"
+
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+<style scoped>
+.content{
+    padding: 20rpx;
+    //display: flex;
 }
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
+.content * {
+    margin-bottom: 10rpx;
 }
 </style>
