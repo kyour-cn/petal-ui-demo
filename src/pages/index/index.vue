@@ -10,13 +10,13 @@
     <view>
 
         <PuCellGroup>
-            <PuCell title="设备名称" value="小P的手机" />
+            <PuCell title="设备名称" value="小P的手机"/>
         </PuCellGroup>
 
         <PuCellGroup>
-            <PuCell title="型号名称" value="HUAWEI P60 Pro" />
-            <PuCell title="型号代码" value="ABR-AL90" />
-            <PuCell title="HarmonyOS版本" value="4.0.0" />
+            <PuCell title="型号名称" value="HUAWEI P60 Pro"/>
+            <PuCell title="型号代码" value="ABR-AL90"/>
+            <PuCell title="HarmonyOS版本" value="4.0.0"/>
         </PuCellGroup>
     </view>
 </template>
@@ -25,35 +25,29 @@
 
 import PuButton from "petal-ui/components/button"
 import PuCell from "petal-ui/components/cell"
-import  PuCellGroup from "petal-ui/components/cell-group"
+import PuCellGroup from "petal-ui/components/cell-group"
 
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";
-import {storeToRefs} from "pinia";
 
 const puiStore = usePetalUiStore()
 
-const { isDark } = storeToRefs(puiStore)
-
-console.log(isDark)
 
 const setTheme = () => {
     // document.documentElement.style.setProperty('--pui-color-primary', '#a223c5');
 
-    puiStore.isDark =  !puiStore.isDark
+    puiStore.isDark = !puiStore.isDark
 
 }
 
 </script>
 
 <style scoped>
-.content{
+.content {
     padding: 20rpx;
-    //display: flex;
 }
+
 .content * {
     margin-bottom: 10rpx;
 }
-page {
-    background-color: #F3F4F6;
-}
+
 </style>
