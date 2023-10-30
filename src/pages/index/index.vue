@@ -34,8 +34,11 @@ const puiStore = usePetalUiStore()
 
 const setTheme = () => {
     // document.documentElement.style.setProperty('--pui-color-primary', '#a223c5');
+    console.log(puiStore.theme)
 
     puiStore.isDark = !puiStore.isDark
+    puiStore.theme.primary = 'red'
+
 
 }
 
@@ -44,10 +47,6 @@ const setTheme = () => {
 <style scoped>
 .content {
     padding: 20rpx;
-}
-
-.content * {
-    margin-bottom: 10rpx;
 }
 
 </style>
