@@ -3,7 +3,6 @@ import {
 } from "vue";
 import App from "./App.vue";
 
-import "petal-ui/style/theme.css"
 import * as Pinia from 'pinia';
 
 export function createApp() {
