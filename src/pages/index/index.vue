@@ -3,10 +3,10 @@
         <Navbar title="PetalUI" />
         
         <view class="content">
-            <PuiButton size="mini" background="green" text="开始体验" />
-            <PuiButton size="small" disabled background="error">开始体验</PuiButton>
-            <PuiButton :block="true" size="normal">开始体验</PuiButton>
-            <PuiButton :block="true" size="large" @click="setTheme" background="#5555FF">切换主题</PuiButton>
+            <pui-button size="mini" background="green" text="开始体验" />
+            <pui-button size="small" disabled background="error">开始体验</pui-button>
+            <pui-button :block="true" size="normal">开始体验</pui-button>
+            <pui-button :block="true" size="large" @click="setTheme" background="#5555FF">切换主题</pui-button>
         </view>
 
         <view>
@@ -44,9 +44,9 @@
             </CellGroup>
         </view>
         <pui-tabbar>
-            <TabbarItem />
-            <TabbarItem />
-            <TabbarItem />
+            <pui-tabbar-item />
+            <pui-tabbar-item />
+            <pui-tabbar-item />
         </pui-tabbar>
     </App>
 
@@ -60,7 +60,7 @@ import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell-group"
 import Navbar from "petal-ui/components/navbar"
 // import Tabbar from "petal-ui/components/tabbar"
-import TabbarItem from "petal-ui/components/tabbar-item"
+// import TabbarItem from "petal-ui/components/tabbar-item"
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";
 
 const puiStore = usePetalUiStore()
