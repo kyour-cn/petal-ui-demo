@@ -1,10 +1,10 @@
 {
-//    "easycom": {
-//        "autoscan": true,
-//        "custom": {
-//            "^pui-(.*)": "petal-ui/components/$1/index.vue"
-//        }
-//    },
+    "easycom": {
+        "autoscan": true,
+        "custom": {
+            "^pui-(.*)": "petal-ui/components/$1/index.vue"
+        }
+    },
     "pages": [
         {
             "path": "pages/index/index"
