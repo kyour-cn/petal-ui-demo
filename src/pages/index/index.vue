@@ -59,8 +59,8 @@ import App from "petal-ui/components/app"
 import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell-group"
 import Navbar from "petal-ui/components/navbar"
-// import Tabbar from "petal-ui/components/tabbar"
-// import TabbarItem from "petal-ui/components/tabbar-item"
+import PuiTabbar from "petal-ui/components/tabbar"
+import PuiTabbarItem from "petal-ui/components/tabbar-item"
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";
 
 const puiStore = usePetalUiStore()
