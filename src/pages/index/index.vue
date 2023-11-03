@@ -28,24 +28,11 @@
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
             </CellGroup>
         </view>
         <pui-tabbar>
             <pui-tabbar-item icon="petal-icon-home" name="首页" />
-            <pui-tabbar-item icon="petal-icon-discover" name="发现" />
+            <pui-tabbar-item icon="petal-icon-discover" activeIcon="petal-icon-discover" name="发现" />
             <pui-tabbar-item icon="petal-icon-contacts" name="我的" />
         </pui-tabbar>
     </App>
