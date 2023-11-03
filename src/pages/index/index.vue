@@ -44,9 +44,9 @@
             </CellGroup>
         </view>
         <pui-tabbar>
-            <pui-tabbar-item />
-            <pui-tabbar-item />
-            <pui-tabbar-item />
+            <pui-tabbar-item icon="petal-icon-home" name="首页" />
+            <pui-tabbar-item icon="petal-icon-discover" name="发现" />
+            <pui-tabbar-item icon="petal-icon-contacts" name="我的" />
         </pui-tabbar>
     </App>
 
@@ -55,7 +55,7 @@
 <script setup>
 
 import App from "petal-ui/components/app"
-// import PuiButton from "petal-ui/components/button"
+import PuiButton from "petal-ui/components/button"
 import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell-group"
 import Navbar from "petal-ui/components/navbar"
