@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'petal-icon';
   src:
-    url('./fonts/petal-icon.ttf?bnhh70') format('truetype'),
-    url('./fonts/petal-icon.woff?bnhh70') format('woff'),
-    url('./fonts/petal-icon.svg?bnhh70#petal-icon') format('svg');
+    url('fonts/petal-icon.ttf?bf2rfg') format('truetype'),
+    url('fonts/petal-icon.woff?bf2rfg') format('woff'),
+    url('fonts/petal-icon.svg?bf2rfg#petal-icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,11 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.petal-icon-timer:before {
-  content: "\e912";
-}
 .petal-icon-home:before {
   content: "\e914";
+}
+.petal-icon-timer:before {
+  content: "\e912";
 }
 .petal-icon-discover:before {
   content: "\e915";
@@ -66,6 +66,15 @@
 .petal-icon-contacts:before {
   content: "\e900";
 }
+.petal-icon-contacts-filled:before {
+  content: "\e92a";
+}
+.petal-icon-contacts-group:before {
+  content: "\e92b";
+}
+.petal-icon-contacts-group-filled:before {
+  content: "\e92c";
+}
 .petal-icon-reset:before {
   content: "\e901";
 }
@@ -74,12 +83,6 @@
 }
 .petal-icon-rotate:before {
   content: "\e920";
-}
-.petal-icon-download:before {
-  content: "\e903";
-}
-.petal-icon-backtotop:before {
-  content: "\e904";
 }
 .petal-icon-add:before {
   content: "\e921";
@@ -92,6 +95,15 @@
 }
 .petal-icon-add-norm-filled:before {
   content: "\e924";
+}
+.petal-icon-download:before {
+  content: "\e903";
+}
+.petal-icon-back:before {
+  content: "\e92d";
+}
+.petal-icon-backtotop:before {
+  content: "\e904";
 }
 .petal-icon-arrow-right:before {
   content: "\e925";
