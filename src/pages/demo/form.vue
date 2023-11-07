@@ -9,7 +9,9 @@
 
         <Switch v-model="switchData" />
 
-        <Radio></Radio>
+        <PuiSlider v-model="sliderValue" />
+
+        {{sliderValue}}
 
     </App>
 </template>
@@ -19,11 +21,15 @@
 import PuiNavbar from "petal-ui/components/navbar/index.vue";
 import App from "petal-ui/components/app"
 import Switch from "petal-ui/components/switch"
+import PuiSlider from "petal-ui/components/slider"
+
 import {ref} from "vue";
 
 const goBack = () => {
     uni.navigateBack()
 }
+
+const sliderValue = ref(0)
 
 const switchData = ref(false)
 
