@@ -7,10 +7,10 @@
             @click-left="goBack"
         />
 
-        <Switch v-model="switchData" />
+        <Switch v-model="switchValue" />
+        {{switchValue}}
 
         <PuiSlider v-model="sliderValue" />
-
         {{sliderValue}}
 
     </App>
@@ -29,9 +29,9 @@ const goBack = () => {
     uni.navigateBack()
 }
 
-const sliderValue = ref(0)
+const switchValue = ref(false)
 
-const switchData = ref(false)
+const sliderValue = ref(10)
 
 </script>
 
