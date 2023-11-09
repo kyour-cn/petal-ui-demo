@@ -81,14 +81,13 @@ const setTheme = () => {
 }
 
 const goPage = (page) => {
-    console.log("goto:" + page)
     //在起始页面跳转到test.vue页面并传递参数
     uni.navigateTo({
         url: page
     });
 }
 
-const shopPopup = ref(true)
+const shopPopup = ref(false)
 const closePopup = () => {
     shopPopup.value = false
 }
