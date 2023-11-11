@@ -19,10 +19,9 @@
                 <Cell title="框架" value="Vue3"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="表单" value="查看演示" is-link @click="goPage('/pages/demo/form')"/>
-                <Cell title="弹出层演示" is-link @click="shopPopup = true"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
-                <Cell title="属性" value="Vite"/>
+                <Cell title="弹出层演示" value="上方弹出" is-link @click="onShopPopup('top')"/>
+                <Cell title="弹出层演示" value="下方弹出" is-link @click="onShopPopup('bottom')"/>
+                <Cell title="弹出层演示" value="中间弹出" is-link @click="onShopPopup('center')"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>
@@ -44,7 +43,9 @@
             </CellGroup>
         </view>
 
-        <PuiPopup v-model="shopPopup" title="弹出层演示" @close="shopPopup = false"/>
+        <PuiPopup v-model="shopPopup" :position="popupPosition">
+            <pui-button size="normal" :block="true" @click="shopPopup = false">关闭弹出层</pui-button>
+        </PuiPopup>
 
         <pui-tabbar>
             <pui-tabbar-item icon="petal-icon-home" name="首页"/>
@@ -88,8 +89,10 @@ const goPage = (page) => {
 }
 
 const shopPopup = ref(false)
-const closePopup = () => {
-    shopPopup.value = false
+const popupPosition = ref('top')
+const onShopPopup = (position) => {
+    popupPosition.value = position
+    shopPopup.value = true
 }
 
 </script>
