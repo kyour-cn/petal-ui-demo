@@ -7,11 +7,14 @@
             @click-left="goBack"
         />
 
-        <Switch v-model="switchValue" />
-        {{switchValue}}
+        <Switch v-model="switchValue"/>
+        <Switch v-model="switchValue" disabled/>
+        {{ switchValue }}
 
-        <PuiSlider v-model="sliderValue" />
-        {{sliderValue}}
+        <PuiSlider v-model="sliderValue"/>
+        {{ sliderValue }}
+
+        <PuiLoading/>
 
     </App>
 </template>
@@ -22,6 +25,7 @@ import PuiNavbar from "petal-ui/components/navbar/index.vue";
 import App from "petal-ui/components/app"
 import Switch from "petal-ui/components/switch"
 import PuiSlider from "petal-ui/components/slider"
+import PuiLoading from "../../comp/loading.vue";
 
 import {ref} from "vue";
 

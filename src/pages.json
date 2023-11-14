@@ -11,6 +11,9 @@
         },
         {
             "path": "pages/demo/form"
+        },
+        {
+            "path": "pages/demo/test"
         }
     ],
     "globalStyle": {

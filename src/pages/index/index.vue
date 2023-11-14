@@ -22,7 +22,7 @@
                 <Cell title="弹出层演示" value="上方弹出" is-link @click="onShopPopup('top')"/>
                 <Cell title="弹出层演示" value="下方弹出" is-link @click="onShopPopup('bottom')"/>
                 <Cell title="弹出层演示" value="中间弹出" is-link @click="onShopPopup('center')"/>
-                <Cell title="属性" value="Vite"/>
+                <Cell title="动画演示" is-link @click="goPage('/pages/demo/test')"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>
