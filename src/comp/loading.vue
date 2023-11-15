@@ -44,19 +44,20 @@ export default {
 @keyframes ld-wander-h {
     0% {
         animation-timing-function: cubic-bezier(0.9647, 0.2413, -0.0705, 0.7911);
-        transform: translate(-650%, 200%)
+        transform: translate(-650%, 200%);
     }
     51% {
         animation-timing-function: cubic-bezier(0.9226, 0.2631, -0.0308, 0.7628);
-        transform: translate(650%, -200%)
+        transform: translate(650%, -400%);
     }
     100% {
-        transform: translate(-650%, 200%)
+        transform: translate(-650%, 200%);
+        background: #bbb;
     }
 }
 
 .wander-h{
-    animation: ld-wander-h 1s infinite linear
+    animation: ld-wander-h 1.5s infinite linear
 }
 
 </style>
