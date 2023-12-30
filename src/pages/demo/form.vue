@@ -22,12 +22,9 @@ import PuiNavbar from "petal-ui/components/navbar/index.vue";
 import App from "petal-ui/components/app"
 import Switch from "petal-ui/components/switch"
 import PuiSlider from "petal-ui/components/slider"
+import {goBack} from "../../utils"
 
 import {ref} from "vue";
-
-const goBack = () => {
-    uni.navigateBack()
-}
 
 const switchValue = ref(false)
 

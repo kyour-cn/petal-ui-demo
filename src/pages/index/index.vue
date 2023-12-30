@@ -67,8 +67,6 @@ import {ref} from "vue";
 
 const puiStore = usePetalUiStore()
 
-const tabbarIndex = ref(1)
-
 const setTheme = () => {
 
     puiStore.dark = !puiStore.dark
