@@ -55,3 +55,9 @@ const post = (url, params = {}, config = {}) => {
 }
 
 export {request, get, post}
+
+export default {
+    request,
+    get,
+    post
+}
