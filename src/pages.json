@@ -5,9 +5,27 @@
             "^pui-(.*)": "petal-ui/components/$1/index.vue"
         }
     },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": ""
+            },
+            {
+                "pagePath": "pages/index/category",
+                "text": ""
+            }
+        ],
+        "color": "",
+        "selectedColor": "",
+        "backgroundColor": ""
+    },
     "pages": [
         {
             "path": "pages/index/index"
+        },
+        {
+            "path": "pages/index/category"
         },
         {
             "path": "pages/demo/form"
@@ -17,6 +35,7 @@
         }
     ],
     "globalStyle": {
-        "navigationStyle":"custom"
+        "navigationStyle": "custom",
+        "navigationBarTitleText" : "PetalUI"
     }
 }

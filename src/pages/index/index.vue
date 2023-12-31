@@ -47,11 +47,8 @@
             <pui-button size="normal" :block="true" @click="shopPopup = false">关闭弹出层</pui-button>
         </PuiPopup>
 
-        <pui-tabbar v-model="tabbarIndex">
-            <pui-tabbar-item icon="petal-icon-home" name="首页"/>
-            <pui-tabbar-item icon="petal-icon-discover" name="发现"/>
-            <pui-tabbar-item icon="petal-icon-contacts" name="我的"/>
-        </pui-tabbar>
+        <Tabbar :index="1"/>
+
     </App>
 
 </template>
@@ -61,17 +58,14 @@
 import App from "petal-ui/components/app"
 import PuiButton from "petal-ui/components/button"
 import Cell from "petal-ui/components/cell"
-import CellGroup from "petal-ui/components/cell-group"
+import CellGroup from "petal-ui/components/cell/cell-group"
 import PuiNavbar from "petal-ui/components/navbar"
-import PuiTabbar from "petal-ui/components/tabbar"
-import PuiTabbarItem from "petal-ui/components/tabbar-item"
 import PuiPopup from "petal-ui/components/popup"
+import Tabbar from "../../components/tabbar.vue";
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";
 import {ref} from "vue";
 
 const puiStore = usePetalUiStore()
-
-const tabbarIndex = ref(1)
 
 const setTheme = () => {
 
