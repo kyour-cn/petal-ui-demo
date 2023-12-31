@@ -16,7 +16,8 @@ const config = {
     tokenType: "header",
     // 自定义请求头信息
     headers: {
+        "X-Requested-With": "XMLHttpRequest"
     },
-};
+}
 
 export default config;
