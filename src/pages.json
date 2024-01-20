@@ -14,6 +14,10 @@
             {
                 "pagePath": "pages/index/category",
                 "text": ""
+            },
+            {
+                "pagePath": "pages/index/my",
+                "text": ""
             }
         ],
         "color": "",
@@ -26,6 +30,9 @@
         },
         {
             "path": "pages/index/category"
+        },
+        {
+            "path": "pages/index/my"
         },
         {
             "path": "pages/demo/form"
