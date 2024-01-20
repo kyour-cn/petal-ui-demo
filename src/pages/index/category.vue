@@ -8,9 +8,9 @@ import Tabbar from "../../components/tabbar.vue";
 import {ref} from "vue";
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";
 import {px2Rpx} from "petal-ui/lib/utils"
+import {onLoad} from "@dcloudio/uni-app";
 
 const puiStore = usePetalUiStore()
-
 const screenWidth = puiStore.screenWidth
 
 // 安全区域高度
@@ -84,6 +84,10 @@ function listLoad() {
     listParams.page++
     getListData()
 }
+
+onLoad(() => {
+    listLoad()
+})
 
 </script>
 
