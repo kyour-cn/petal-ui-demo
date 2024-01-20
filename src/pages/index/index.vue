@@ -2,10 +2,12 @@
 
 import App from "petal-ui/components/app"
 import PuiButton from "petal-ui/components/button"
+import PuiLoading from "petal-ui/components/loading"
 import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell/cell-group"
 import PuiNavbar from "petal-ui/components/navbar"
 import PuiPopup from "petal-ui/components/popup"
+import PuiSwiper from "petal-ui/components/swiper"
 // import PuiImage from "petal-ui/components/image";
 import PuiTabs from "petal-ui/components/tabs";
 import Tabbar from "../../components/tabbar.vue";
@@ -54,47 +56,20 @@ const tabList = ref([
     {
         name: '弹窗5',
     },
+])
+
+const swiperList = ref([
     {
-        name: '弹窗5',
+        title: 'PetalUI',
+        src: 'https://res.vmallres.com/uomcdn/CN/cms/2024-01/ab3fdadeb25c4f708f94ad84e3780d3c.jpg',
     },
     {
-        name: '弹窗5',
+        title: 'PetalUI',
+        src: 'https://res.vmallres.com/uomcdn/CN/cms/2024-01/a053fb3832fb4f7ba3e0f94b4409ed33.jpg',
     },
     {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
-    },
-    {
-        name: '弹窗5',
+        title: 'PetalUI',
+        src: 'https://res.vmallres.com/uomcdn/CN/cms/2023-12/7c158edb67ae46019f8de58e6ed7a865.jpg',
     },
 ])
 
@@ -116,20 +91,29 @@ const onShopPopup = (position) => {
 
 <template>
     <App>
-        <PuiNavbar title="PetalUI" left-icon="/static/petal-ui-logo.png" />
+        <PuiNavbar title="PetalUI Demo" left-icon="/static/petal-ui-logo.png" />
+
+        <PuiSwiper
+            :list="swiperList"
+            :item-margin="20"
+            :radius="20"
+        />
 
 <!--        <view class="logo">-->
 <!--            <PuiImage :width="200" :height="200" src="/static/petal-ui-logo.png" />-->
 <!--        </view>-->
 
         <view class="content">
+            <PuiLoading />
             <pui-button size="mini" background="green" text="开始体验"/>
-            <pui-button size="small" disabled background="error">开始体验</pui-button>
+            <pui-button size="small" disabled background="error">
+                开始体验
+            </pui-button>
             <pui-button :block="true" size="normal">开始体验</pui-button>
             <pui-button :block="true" size="large" @click="setTheme" background="#5555FF">切换主题</pui-button>
         </view>
 
-        <view>
+        <view style="margin: 0 20rpx">
             <PuiTabs v-model="tabIndex" :list="tabList" key="name"/>
         </view>
 
