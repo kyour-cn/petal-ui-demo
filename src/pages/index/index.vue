@@ -6,6 +6,8 @@ import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell/cell-group"
 import PuiNavbar from "petal-ui/components/navbar"
 import PuiPopup from "petal-ui/components/popup"
+// import PuiImage from "petal-ui/components/image";
+import PuiTabs from "petal-ui/components/tabs";
 import Tabbar from "../../components/tabbar.vue";
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";
 import {ref} from "vue";
@@ -13,14 +15,88 @@ import {ref} from "vue";
 const puiStore = usePetalUiStore()
 
 const setTheme = () => {
-
     puiStore.dark = !puiStore.dark
 
     // puiStore.setTheme({
     //     'primary': 'red'
     // })
-
 }
+
+const tabIndex = ref(0)
+const tabList = ref([
+    {
+        name: '基础',
+    },
+    {
+        name: '导航',
+    },
+    {
+        name: '表单',
+    },
+    {
+        name: '列表',
+    },
+    {
+        name: '卡片',
+    },
+    {
+        name: '弹窗',
+    },
+    {
+        name: '弹窗2',
+    },
+    {
+        name: '弹窗3',
+    },
+    {
+        name: '弹窗4',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+    {
+        name: '弹窗5',
+    },
+])
 
 const goPage = (page) => {
     //在起始页面跳转到test.vue页面并传递参数
@@ -40,13 +116,21 @@ const onShopPopup = (position) => {
 
 <template>
     <App>
-        <PuiNavbar title="PetalUI"/>
+        <PuiNavbar title="PetalUI" left-icon="/static/petal-ui-logo.png" />
+
+<!--        <view class="logo">-->
+<!--            <PuiImage :width="200" :height="200" src="/static/petal-ui-logo.png" />-->
+<!--        </view>-->
 
         <view class="content">
             <pui-button size="mini" background="green" text="开始体验"/>
             <pui-button size="small" disabled background="error">开始体验</pui-button>
             <pui-button :block="true" size="normal">开始体验</pui-button>
             <pui-button :block="true" size="large" @click="setTheme" background="#5555FF">切换主题</pui-button>
+        </view>
+
+        <view>
+            <PuiTabs v-model="tabIndex" :list="tabList" key="name"/>
         </view>
 
         <view>
