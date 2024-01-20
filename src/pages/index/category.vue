@@ -1,40 +1,3 @@
-<template>
-    <App>
-        <PuiNavbar
-            title="分类"
-        />
-
-        <view class="category-body">
-            <PuiSidebar v-model="sidebarIndex" @change="changeIndex">
-                <PuiSidebarItem
-                    v-for="item in categoryList"
-                    :key="item.id"
-                    :title="item.name"
-                />
-            </PuiSidebar>
-
-            <PuiList
-                class="goods-list"
-                v-model:loading="loading"
-                :list="listData"
-                :pull-refresh="true"
-                :finished="listFinished"
-                :style="{height: bdyH + 'rpx'}"
-                @load="listLoad"
-                @refresh="onRefresh"
-            >
-                <template #item="{ item }">
-                    <view>
-                        {{item}}
-                    </view>
-                </template>
-            </PuiList>
-        </view>
-
-        <Tabbar :index="2"/>
-    </App>
-</template>
-
 <script setup>
 import App from "petal-ui/components/app"
 import PuiNavbar from "petal-ui/components/navbar"
@@ -123,6 +86,43 @@ function listLoad() {
 }
 
 </script>
+
+<template>
+    <App>
+        <PuiNavbar
+            title="分类"
+        />
+
+        <view class="category-body">
+            <PuiSidebar v-model="sidebarIndex" @change="changeIndex">
+                <PuiSidebarItem
+                    v-for="item in categoryList"
+                    :key="item.id"
+                    :title="item.name"
+                />
+            </PuiSidebar>
+
+            <PuiList
+                class="goods-list"
+                v-model:loading="loading"
+                :list="listData"
+                :pull-refresh="true"
+                :finished="listFinished"
+                :style="{height: bdyH + 'rpx'}"
+                @load="listLoad"
+                @refresh="onRefresh"
+            >
+                <template #item="{ item }">
+                    <view>
+                        {{item}}
+                    </view>
+                </template>
+            </PuiList>
+        </view>
+
+        <Tabbar :index="2"/>
+    </App>
+</template>
 
 <style scoped>
 

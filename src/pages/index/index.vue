@@ -1,3 +1,43 @@
+<script setup>
+
+import App from "petal-ui/components/app"
+import PuiButton from "petal-ui/components/button"
+import Cell from "petal-ui/components/cell"
+import CellGroup from "petal-ui/components/cell/cell-group"
+import PuiNavbar from "petal-ui/components/navbar"
+import PuiPopup from "petal-ui/components/popup"
+import Tabbar from "../../components/tabbar.vue";
+import {usePetalUiStore} from "petal-ui/stores/petal-ui";
+import {ref} from "vue";
+
+const puiStore = usePetalUiStore()
+
+const setTheme = () => {
+
+    puiStore.dark = !puiStore.dark
+
+    // puiStore.setTheme({
+    //     'primary': 'red'
+    // })
+
+}
+
+const goPage = (page) => {
+    //在起始页面跳转到test.vue页面并传递参数
+    uni.navigateTo({
+        url: page
+    });
+}
+
+const shopPopup = ref(false)
+const popupPosition = ref('top')
+const onShopPopup = (position) => {
+    popupPosition.value = position
+    shopPopup.value = true
+}
+
+</script>
+
 <template>
     <App>
         <PuiNavbar title="PetalUI"/>
@@ -52,46 +92,6 @@
     </App>
 
 </template>
-
-<script setup>
-
-import App from "petal-ui/components/app"
-import PuiButton from "petal-ui/components/button"
-import Cell from "petal-ui/components/cell"
-import CellGroup from "petal-ui/components/cell/cell-group"
-import PuiNavbar from "petal-ui/components/navbar"
-import PuiPopup from "petal-ui/components/popup"
-import Tabbar from "../../components/tabbar.vue";
-import {usePetalUiStore} from "petal-ui/stores/petal-ui";
-import {ref} from "vue";
-
-const puiStore = usePetalUiStore()
-
-const setTheme = () => {
-
-    puiStore.dark = !puiStore.dark
-
-    // puiStore.setTheme({
-    //     'primary': 'red'
-    // })
-
-}
-
-const goPage = (page) => {
-    //在起始页面跳转到test.vue页面并传递参数
-    uni.navigateTo({
-        url: page
-    });
-}
-
-const shopPopup = ref(false)
-const popupPosition = ref('top')
-const onShopPopup = (position) => {
-    popupPosition.value = position
-    shopPopup.value = true
-}
-
-</script>
 
 <style scoped>
 .content {

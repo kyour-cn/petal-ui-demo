@@ -1,15 +1,3 @@
-<template>
-    <pui-tabbar v-model="index" :allow-change="false">
-        <pui-tabbar-item
-            v-for="(item, key) in tabPages"
-            :key="key"
-            :icon="item.icon"
-            :name="item.name"
-            @click="changeIndex(key + 1)"
-        />
-    </pui-tabbar>
-</template>
-
 <script setup>
 import PuiTabbar from "petal-ui/components/tabbar"
 import PuiTabbarItem from "petal-ui/components/tabbar/tabbar-item"
@@ -34,6 +22,11 @@ const tabPages = [
         name: "分类",
         icon: "petal-icon-app",
         path: "/pages/index/category"
+    },
+    {
+        name: "我的",
+        icon: "petal-icon-contacts",
+        path: "/pages/index/my"
     }
 ]
 
@@ -50,6 +43,14 @@ uni.hideTabBar()
 
 </script>
 
-<style scoped>
-
-</style>
+<template>
+    <pui-tabbar v-model="index" :allow-change="false">
+        <pui-tabbar-item
+            v-for="(item, key) in tabPages"
+            :key="key"
+            :icon="item.icon"
+            :name="item.name"
+            @click="changeIndex(key + 1)"
+        />
+    </pui-tabbar>
+</template>
