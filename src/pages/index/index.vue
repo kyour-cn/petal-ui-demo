@@ -2,6 +2,7 @@
 
 import App from "petal-ui/components/app"
 import PuiButton from "petal-ui/components/button"
+import PuiEmpty from "petal-ui/components/empty"
 import PuiLoading from "petal-ui/components/loading"
 import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell/cell-group"
@@ -58,6 +59,11 @@ const tabList = ref([
     },
 ])
 
+const changeTabsPage = (e) => {
+    tabIndex.value = e.detail.current
+    console.log(e.detail.current)
+}
+
 const swiperList = ref([
     {
         title: 'PetalUI',
@@ -109,12 +115,23 @@ const onShopPopup = (position) => {
             <pui-button size="small" disabled background="error">
                 开始体验
             </pui-button>
-            <pui-button :block="true" size="normal">开始体验</pui-button>
+            <pui-button :block="true" size="normal" @click="tabIndex++">开始体验</pui-button>
             <pui-button :block="true" size="large" @click="setTheme" background="#5555FF">切换主题</pui-button>
         </view>
 
         <view style="margin: 0 20rpx">
             <PuiTabs v-model="tabIndex" :list="tabList" key="name"/>
+
+            <swiper
+                :autoplay="false"
+                style="height: 400rpx"
+                @change="changeTabsPage"
+            >
+                <swiper-item v-for="(item, key) in tabList" :key="key">
+                    <PuiEmpty :description="item.name+ '开发中'" />
+                </swiper-item>
+            </swiper>
+
         </view>
 
         <view>
