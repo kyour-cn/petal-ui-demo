@@ -4,6 +4,9 @@ import PuiNavbar from "petal-ui/components/navbar/index.vue";
 import App from "petal-ui/components/app"
 import Switch from "petal-ui/components/switch"
 import PuiSlider from "petal-ui/components/slider"
+import PuiCard from "petal-ui/components/card"
+import Cell from "petal-ui/components/cell"
+import CellGroup from "petal-ui/components/cell/cell-group"
 import {goBack} from "../../utils"
 
 import {ref} from "vue";
@@ -23,11 +26,24 @@ const sliderValue = ref(10)
             @click-left="goBack"
         />
 
-        <Switch v-model="switchValue" />
-        {{switchValue}}
+        <CellGroup>
+            <Cell title="开关">
+                <template #value>
+                    <Switch v-model="switchValue" />
+                </template>
+            </Cell>
+            <Cell title="文本输入">
+                <template #value>
+                    <input type="text" style="text-align: right" placeholder="请输入">
+                </template>
+            </Cell>
+        </CellGroup>
 
-        <PuiSlider v-model="sliderValue" />
-        {{sliderValue}}
+        <PuiCard>
+            <PuiSlider v-model="sliderValue" />
+            {{sliderValue}}
+        </PuiCard>
+
 
     </App>
 </template>

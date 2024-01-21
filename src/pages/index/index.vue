@@ -9,11 +9,14 @@ import CellGroup from "petal-ui/components/cell/cell-group"
 import PuiNavbar from "petal-ui/components/navbar"
 import PuiPopup from "petal-ui/components/popup"
 import PuiSwiper from "petal-ui/components/swiper"
+import PuiIcon from "petal-ui/components/icon"
+import PuiSearch from "petal-ui/components/search"
 // import PuiImage from "petal-ui/components/image";
 import PuiTabs from "petal-ui/components/tabs";
 import Tabbar from "../../components/tabbar.vue";
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";
 import {ref} from "vue";
+import {onPageScroll} from "@dcloudio/uni-app";
 
 const puiStore = usePetalUiStore()
 
@@ -61,7 +64,6 @@ const tabList = ref([
 
 const changeTabsPage = (e) => {
     tabIndex.value = e.detail.current
-    console.log(e.detail.current)
 }
 
 const swiperList = ref([
@@ -93,11 +95,34 @@ const onShopPopup = (position) => {
     shopPopup.value = true
 }
 
+const onSearch = () => {
+    uni.showToast({
+        title: '暂未开放',
+        icon: 'error',
+        duration: 2000
+    });
+}
+
+// 监听页面滚动
+const pageScroll = ref(0)
+onPageScroll((e) => {
+    pageScroll.value = e.scrollTop
+})
+
 </script>
 
 <template>
     <App>
-        <PuiNavbar title="PetalUI Demo" left-icon="/static/petal-ui-logo.png" />
+        <PuiNavbar title="PetalUI Demo" left-icon="/static/petal-ui-logo.png">
+            <template #right>
+                <view style="margin-right: 20rpx;" @click="onSearch">
+                    <PuiIcon v-if="pageScroll > 50" name="petal-icon-search" :size="40" />
+                    <PuiIcon v-else name="petal-icon-help" :size="40" />
+                </view>
+            </template>
+        </PuiNavbar>
+
+        <PuiSearch placeholder="搜索组件/内容" @search="onSearch"/>
 
         <PuiSwiper
             :list="swiperList"
@@ -123,6 +148,7 @@ const onShopPopup = (position) => {
             <PuiTabs v-model="tabIndex" :list="tabList" key="name"/>
 
             <swiper
+                :current="tabIndex"
                 :autoplay="false"
                 style="height: 400rpx"
                 @change="changeTabsPage"
