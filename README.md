@@ -1,7 +1,5 @@
 # Petal-UI
 
----
-
 > 基于Uniapp & Vite的轻量化UI库
 
 ## 主要特性
