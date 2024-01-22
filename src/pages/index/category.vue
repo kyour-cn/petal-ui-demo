@@ -15,7 +15,7 @@ const screenWidth = puiStore.screenWidth
 
 // 安全区域高度
 const saleH = px2Rpx(puiStore.safeAreaInsets.top, screenWidth) - px2Rpx(puiStore.safeAreaInsets.bottom, screenWidth)
-const bdyH = px2Rpx(puiStore.windowInfo.windowHeight, screenWidth) - saleH - 120 - 88 - 20
+const bdyH = px2Rpx(puiStore.windowInfo.windowHeight, screenWidth) - saleH - 120 - 88
 
 // 侧边分类导航栏
 const sidebarIndex = ref(0)
@@ -43,7 +43,7 @@ const categoryList = ref([
     {
         id: 6,
         name: "其他"
-    }
+    },
 ])
 
 // 商品列表
@@ -98,7 +98,13 @@ onLoad(() => {
         />
 
         <view class="category-body">
-            <PuiSidebar v-model="sidebarIndex" @change="changeIndex">
+            <PuiSidebar
+                v-model="sidebarIndex"
+                :_style="{
+                    height: bdyH + 'rpx'
+                }"
+                @change="changeIndex"
+            >
                 <PuiSidebarItem
                     v-for="item in categoryList"
                     :key="item.id"
