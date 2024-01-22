@@ -11,7 +11,6 @@ import PuiPopup from "petal-ui/components/popup"
 import PuiSwiper from "petal-ui/components/swiper"
 import PuiIcon from "petal-ui/components/icon"
 import PuiSearch from "petal-ui/components/search"
-// import PuiImage from "petal-ui/components/image";
 import PuiTabs from "petal-ui/components/tabs";
 import Tabbar from "../../components/tabbar.vue";
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";

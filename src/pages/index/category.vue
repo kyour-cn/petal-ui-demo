@@ -143,7 +143,6 @@ onLoad(() => {
 
 .goods-list {
     flex: 1;
-    margin: 10rpx 20rpx 10rpx 10rpx;
     overflow-y: scroll;
 }
 
