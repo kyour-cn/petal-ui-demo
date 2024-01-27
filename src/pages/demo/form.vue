@@ -1,12 +1,12 @@
 <script setup>
 
-import PuiNavbar from "petal-ui/components/navbar/index.vue";
+import PuiNavbar from "petal-ui/components/navbar";
 import App from "petal-ui/components/app"
 import Switch from "petal-ui/components/switch"
 import PuiSlider from "petal-ui/components/slider"
 import PuiCard from "petal-ui/components/card"
 import Cell from "petal-ui/components/cell"
-import CellGroup from "petal-ui/components/cell/cell-group"
+import CellGroup from "petal-ui/components/cell-group"
 import {goBack} from "../../utils"
 
 import {ref} from "vue";
@@ -43,7 +43,6 @@ const sliderValue = ref(10)
             <PuiSlider v-model="sliderValue" />
             {{sliderValue}}
         </PuiCard>
-
 
     </App>
 </template>

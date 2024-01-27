@@ -3,7 +3,7 @@ import App from "petal-ui/components/app"
 import PuiNavbar from "petal-ui/components/navbar"
 import PuiList from "petal-ui/components/list"
 import PuiSidebar from "petal-ui/components/sidebar"
-import PuiSidebarItem from "petal-ui/components/sidebar/sidebar-item"
+import PuiSidebarItem from "petal-ui/components/sidebar-item"
 import Tabbar from "../../components/tabbar.vue";
 import {ref} from "vue";
 import {usePetalUiStore} from "petal-ui/stores/petal-ui";

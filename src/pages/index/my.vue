@@ -1,6 +1,6 @@
 <script setup>
 import App from "petal-ui/components/app"
-import PuiNavbar from "petal-ui/components/navbar/index.vue";
+import PuiNavbar from "petal-ui/components/navbar";
 import Tabbar from "../../components/tabbar.vue";
 
 </script>
