@@ -15,6 +15,7 @@ const switchValue = ref(false)
 
 const sliderValue = ref(20)
 const sliderValue2 = ref(200)
+const textVal = ref("")
 
 </script>
 
@@ -33,17 +34,13 @@ const sliderValue2 = ref(200)
                     <Switch v-model="switchValue" />
                 </template>
             </FormItem>
-            <FormItem title="文本输入" required>
-                <template #value>
-                    <input style="flex: 1" type="text" placeholder="请输入">
-                </template>
-            </FormItem>
+            <FormItem v-model="textVal" title="文本输入" required type="text"/>
+            <FormItem title="内容显示" v-model="textVal"/>
             <FormItem title="滑动条" :label="'这是一个滑动条，值为：'+ sliderValue">
                 <template #value>
                     <PuiSlider style="flex: 1" :min="10" v-model="sliderValue" />
                 </template>
             </FormItem>
-            <FormItem title="内容显示" :value="sliderValue"/>
         </Form>
 
         <PuiCard>
