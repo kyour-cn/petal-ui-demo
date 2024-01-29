@@ -1,6 +1,6 @@
 <script setup>
 import PuiTabbar from "petal-ui/components/tabbar"
-import PuiTabbarItem from "petal-ui/components/tabbar/tabbar-item"
+import PuiTabbarItem from "petal-ui/components/tabbar-item"
 import {ref} from "vue";
 
 const props = defineProps({

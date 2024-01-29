@@ -5,15 +5,16 @@ import App from "petal-ui/components/app"
 import Switch from "petal-ui/components/switch"
 import PuiSlider from "petal-ui/components/slider"
 import PuiCard from "petal-ui/components/card"
-import Cell from "petal-ui/components/cell"
-import CellGroup from "petal-ui/components/cell-group"
+import FormItem from "petal-ui/components/form-item"
+import Form from "petal-ui/components/form"
 import {goBack} from "../../utils"
 
 import {ref} from "vue";
 
 const switchValue = ref(false)
 
-const sliderValue = ref(10)
+const sliderValue = ref(20)
+const sliderValue2 = ref(200)
 
 </script>
 
@@ -26,22 +27,28 @@ const sliderValue = ref(10)
             @click-left="goBack"
         />
 
-        <CellGroup>
-            <Cell title="开关">
+        <Form>
+            <FormItem title="开关">
                 <template #value>
                     <Switch v-model="switchValue" />
                 </template>
-            </Cell>
-            <Cell title="文本输入">
+            </FormItem>
+            <FormItem title="文本输入" required>
                 <template #value>
-                    <input type="text" style="text-align: right" placeholder="请输入">
+                    <input style="flex: 1" type="text" placeholder="请输入">
                 </template>
-            </Cell>
-        </CellGroup>
+            </FormItem>
+            <FormItem title="滑动条" :label="'这是一个滑动条，值为：'+ sliderValue">
+                <template #value>
+                    <PuiSlider style="flex: 1" :min="10" v-model="sliderValue" />
+                </template>
+            </FormItem>
+            <FormItem title="内容显示" :value="sliderValue"/>
+        </Form>
 
         <PuiCard>
-            <PuiSlider v-model="sliderValue" />
-            {{sliderValue}}
+            <PuiSlider v-model="sliderValue2" :min="100" :max="500"/>
+            {{sliderValue2}}
         </PuiCard>
 
     </App>
