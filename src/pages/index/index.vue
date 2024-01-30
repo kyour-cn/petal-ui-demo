@@ -112,7 +112,7 @@ onPageScroll((e) => {
 
 <template>
     <App>
-        <PuiNavbar title="PetalUI Demo" left-icon="/static/petal-ui-logo.png">
+        <PuiNavbar title="PetalUI Demo" left-icon="https://qiniu.kyour.cn/petal-ui/petal-ui-logo.png">
             <template #right>
                 <view style="margin-right: 20rpx;" @click="onSearch">
                     <PuiIcon v-if="pageScroll > 50" name="petal-icon-search" :size="40" />
@@ -128,10 +128,6 @@ onPageScroll((e) => {
             :item-margin="20"
             :radius="20"
         />
-
-<!--        <view class="logo">-->
-<!--            <PuiImage :width="200" :height="200" src="/static/petal-ui-logo.png" />-->
-<!--        </view>-->
 
         <view class="content">
             <PuiLoading />

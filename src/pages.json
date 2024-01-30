@@ -40,6 +40,7 @@
     ],
     "globalStyle": {
         "navigationStyle": "custom",
-        "navigationBarTitleText" : "PetalUI"
+        "navigationBarTitleText" : "PetalUI",
+        "navigationBarTextStyle": "black"
     }
 }
