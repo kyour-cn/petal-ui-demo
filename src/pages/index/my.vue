@@ -2,8 +2,9 @@
 import App from "petal-ui/components/app"
 import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell-group"
-import PuiNavbar from "petal-ui/components/navbar";
-import Tabbar from "../../components/tabbar.vue";
+import PuiNavbar from "petal-ui/components/navbar"
+import PuiIcon from "petal-ui/components/icon"
+import Tabbar from "../../components/tabbar.vue"
 
 </script>
 
@@ -11,15 +12,18 @@ import Tabbar from "../../components/tabbar.vue";
     <App>
         <PuiNavbar
             title="我的"
+            right-icon="petal-icon-contacts"
         />
 
         <CellGroup>
             <Cell>
                 <view class="user-info">
                     <image class="avatar" src="https://qiniu.kyour.cn/petal-ui/petal-ui-logo.png"/>
-
                     <view class="user-name">
                         Petal UI
+                    </view>
+                    <view class="user-setting">
+                        <PuiIcon name="petal-icon-settings"/>
                     </view>
                 </view>
             </Cell>
@@ -29,13 +33,13 @@ import Tabbar from "../../components/tabbar.vue";
 
         <CellGroup>
             <Cell title="我的订单" is-link/>
-            <Cell title="我的订单" is-link/>
+            <Cell title="浏览记录" is-link/>
             <Cell title="我的收藏" is-link/>
         </CellGroup>
 
         <CellGroup>
-            <Cell title="设置" is-link/>
-            <Cell title="帮助与客服" is-link/>
+            <Cell title="设置" icon="petal-icon-settings" is-link/>
+            <Cell title="帮助与客服" icon="petal-icon-detail" is-link/>
         </CellGroup>
         <Tabbar :index="3"/>
     </App>
@@ -46,6 +50,7 @@ import Tabbar from "../../components/tabbar.vue";
 .user-info {
     display: flex;
     margin: 20rpx;
+    width: 100%;
     flex-direction: row;
     align-items: center;
 }
@@ -58,6 +63,9 @@ import Tabbar from "../../components/tabbar.vue";
 .user-info .user-name {
     margin-left: 20rpx;
     font-weight: bold;
+}
+.user-info .user-setting {
+    margin-left: auto;
 }
 
 </style>

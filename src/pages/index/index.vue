@@ -11,20 +11,16 @@ import PuiPopup from "petal-ui/components/popup"
 import PuiSwiper from "petal-ui/components/swiper"
 import PuiIcon from "petal-ui/components/icon"
 import PuiSearch from "petal-ui/components/search"
-import PuiTabs from "petal-ui/components/tabs";
-import Tabbar from "../../components/tabbar.vue";
-import {usePetalUiStore} from "petal-ui/stores/petal-ui";
-import {ref} from "vue";
-import {onPageScroll} from "@dcloudio/uni-app";
+import PuiTabs from "petal-ui/components/tabs"
+import Tabbar from "../../components/tabbar.vue"
+import {usePetalUiStore} from "petal-ui/stores/petal-ui"
+import {ref} from "vue"
+import {onPageScroll} from "@dcloudio/uni-app"
 
 const puiStore = usePetalUiStore()
 
 const setTheme = () => {
     puiStore.dark = !puiStore.dark
-
-    // puiStore.setTheme({
-    //     'primary': 'red'
-    // })
 }
 
 const tabIndex = ref(0)
@@ -49,16 +45,7 @@ const tabList = ref([
     },
     {
         name: '弹窗2',
-    },
-    {
-        name: '弹窗3',
-    },
-    {
-        name: '弹窗4',
-    },
-    {
-        name: '弹窗5',
-    },
+    }
 ])
 
 const changeTabsPage = (e) => {
@@ -149,7 +136,10 @@ onPageScroll((e) => {
                 @change="changeTabsPage"
             >
                 <swiper-item v-for="(item, key) in tabList" :key="key">
-                    <PuiEmpty :description="item.name+ '开发中'" />
+                    <PuiEmpty
+                        :src="'https://qiniu.kyour.cn/petal-ui/empty-01.svg'"
+                        :description="item.name+ '开发中'"
+                    />
                 </swiper-item>
             </swiper>
 

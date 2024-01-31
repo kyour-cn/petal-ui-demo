@@ -1,5 +1,7 @@
 <script setup>
 import App from "petal-ui/components/app"
+import Cell from "petal-ui/components/cell"
+import CellGroup from "petal-ui/components/cell-group"
 import PuiNavbar from "petal-ui/components/navbar"
 import PuiList from "petal-ui/components/list"
 import PuiSidebar from "petal-ui/components/sidebar"
@@ -62,7 +64,7 @@ const getListData = () => {
         loading.value = false
 
         // 模拟接口返回数据
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 10; i++) {
             listData.value.push({
                 'name': '测试数据' + listData.value.length
             })
@@ -107,6 +109,7 @@ onLoad(() => {
     <App>
         <PuiNavbar
             title="分类"
+            right-icon="petal-icon-more-filled"
         />
 
         <view class="category-body">
@@ -135,9 +138,9 @@ onLoad(() => {
                 @refresh="onRefresh"
             >
                 <template #item="{ item }">
-                    <view class="list-item-demo">
-                        {{item.name}}
-                    </view>
+                    <CellGroup>
+                        <Cell :title="item.name"/>
+                    </CellGroup>
                 </template>
             </PuiList>
         </view>
@@ -155,15 +158,6 @@ onLoad(() => {
 
 .goods-list {
     flex: 1;
-}
-
-.list-item-demo{
-    display: flex;
-    padding: 20rpx;
-    margin: 20rpx;
-    border-bottom: 1px solid #eee;
-    background: white;
-    border-radius: 20rpx;
 }
 
 </style>
