@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'petal-icon';
   src:
-    url('fonts/petal-icon.ttf?2dh8jv') format('truetype'),
-    url('fonts/petal-icon.woff?2dh8jv') format('woff'),
-    url('fonts/petal-icon.svg?2dh8jv#petal-icon') format('svg');
+    url('fonts/petal-icon.ttf?xtcq6p') format('truetype'),
+    url('fonts/petal-icon.woff?xtcq6p') format('woff'),
+    url('fonts/petal-icon.svg?xtcq6p#petal-icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -11,7 +11,7 @@
 
 [class^="petal-icon-"], [class*=" petal-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'petal-icon', serif !important;
+  font-family: 'petal-icon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -101,6 +101,9 @@
 }
 .petal-icon-home:before {
   content: "\e914";
+}
+.petal-icon-home-filled:before {
+  content: "\e94d";
 }
 .petal-icon-timer:before {
   content: "\e912";
