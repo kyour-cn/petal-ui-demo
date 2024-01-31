@@ -136,7 +136,7 @@ onLoad(() => {
             >
                 <template #item="{ item }">
                     <view class="list-item-demo">
-                        {{item}}
+                        {{item.name}}
                     </view>
                 </template>
             </PuiList>
