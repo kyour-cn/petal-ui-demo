@@ -4,11 +4,11 @@ import PuiNavbar from "petal-ui/components/navbar"
 import PuiList from "petal-ui/components/list"
 import PuiSidebar from "petal-ui/components/sidebar"
 import PuiSidebarItem from "petal-ui/components/sidebar-item"
-import Tabbar from "../../components/tabbar.vue";
-import {ref} from "vue";
-import {usePetalUiStore} from "petal-ui/stores/petal-ui";
+import Tabbar from "../../components/tabbar.vue"
+import {ref} from "vue"
+import {usePetalUiStore} from "petal-ui/stores/petal-ui"
 import {px2Rpx} from "petal-ui/lib/utils"
-import {onLoad} from "@dcloudio/uni-app";
+import {onLoad} from "@dcloudio/uni-app"
 
 const puiStore = usePetalUiStore()
 const screenWidth = puiStore.screenWidth
@@ -47,7 +47,7 @@ const categoryList = ref([
 ])
 
 // 商品列表
-const loading = ref(false)
+const loading = ref(true)
 const listData = ref([])
 const listFinished = ref(false)
 const listParams = {
@@ -59,8 +59,19 @@ const listParams = {
 const getListData = () => {
     // 这里模拟数据加载
     setTimeout(() => {
-        listFinished.value = true
         loading.value = false
+
+        // 模拟接口返回数据
+        for (let i = 0; i < 20; i++) {
+            listData.value.push({
+                'name': '测试数据' + listData.value.length
+            })
+        }
+
+        if(listData.value.length > 100) {
+            listFinished.value = true
+        }
+
     }, 500)
 }
 
@@ -69,6 +80,7 @@ const changeIndex = (index) => {
     listData.value = []
     listParams.category_id = categoryList.value[index].id
     listParams.page = 1
+    listFinished.value = false
 
     getListData()
 }
@@ -123,7 +135,7 @@ onLoad(() => {
                 @refresh="onRefresh"
             >
                 <template #item="{ item }">
-                    <view>
+                    <view class="list-item-demo">
                         {{item}}
                     </view>
                 </template>
@@ -143,7 +155,15 @@ onLoad(() => {
 
 .goods-list {
     flex: 1;
-    overflow-y: scroll;
+}
+
+.list-item-demo{
+    display: flex;
+    padding: 20rpx;
+    margin: 20rpx;
+    border-bottom: 1px solid #eee;
+    background: white;
+    border-radius: 20rpx;
 }
 
 </style>
