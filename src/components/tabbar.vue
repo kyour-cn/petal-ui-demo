@@ -16,16 +16,19 @@ const tabPages = [
     {
         name: "首页",
         icon: "petal-icon-home",
+        activeIcon: "petal-icon-home-filled",
         path: "/pages/index/index"
     },
     {
         name: "分类",
         icon: "petal-icon-app",
+        activeIcon: "petal-icon-app-filled",
         path: "/pages/index/category"
     },
     {
         name: "我的",
         icon: "petal-icon-contacts",
+        activeIcon: "petal-icon-contacts-filled",
         path: "/pages/index/my"
     }
 ]
@@ -49,6 +52,7 @@ uni.hideTabBar()
             v-for="(item, key) in tabPages"
             :key="key"
             :icon="item.icon"
+            :active-icon="item.activeIcon"
             :name="item.name"
             @click="changeIndex(key + 1)"
         />
