@@ -155,9 +155,9 @@ onPageScroll((e) => {
                 <Cell title="框架" value="Vue3"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="表单" value="查看演示" is-link @click="goPage('/pages/demo/form')"/>
-                <Cell title="弹出层演示" value="上方弹出" is-link @click="onShopPopup('top')"/>
-                <Cell title="弹出层演示" value="下方弹出" is-link @click="onShopPopup('bottom')"/>
-                <Cell title="弹出层演示" value="中间弹出" is-link @click="onShopPopup('center')"/>
+                <Cell title="弹出层演示" value="上方弹出SSS" is-link @click="onShopPopup('top')"/>
+                <Cell title="弹出层演示" value="下方弹出1a" is-link @click="onShopPopup('bottom')"/>
+                <Cell title="弹出层演示" value="asdcvvv" is-link @click="onShopPopup('center')"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>
                 <Cell title="属性" value="Vite"/>

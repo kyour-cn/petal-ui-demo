@@ -13,11 +13,13 @@ import {px2Rpx} from "petal-ui/lib/utils"
 import {onLoad} from "@dcloudio/uni-app"
 
 const puiStore = usePetalUiStore()
-const screenWidth = puiStore.screenWidth
+
+const winInfo = puiStore.windowInfo
+const screenWidth = winInfo.screenWidth
 
 // 安全区域高度
-const saleH = px2Rpx(puiStore.safeAreaInsets.top, screenWidth) - px2Rpx(puiStore.safeAreaInsets.bottom, screenWidth)
-const bdyH = px2Rpx(puiStore.windowInfo.windowHeight, screenWidth) - saleH - 120 - 88
+const saleH = px2Rpx(winInfo.safeAreaInsets.top, screenWidth) - px2Rpx(winInfo.safeAreaInsets.bottom, screenWidth)
+const bdyH = px2Rpx(winInfo.windowHeight, screenWidth) - saleH - 120 - 88 // 顶部、底部导航栏高度 120 + 88
 
 // 侧边分类导航栏
 const sidebarIndex = ref(0)
