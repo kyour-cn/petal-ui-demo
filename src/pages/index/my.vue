@@ -4,7 +4,19 @@ import Cell from "petal-ui/components/cell"
 import CellGroup from "petal-ui/components/cell-group"
 import PuiNavbar from "petal-ui/components/navbar"
 import PuiIcon from "petal-ui/components/icon"
+import PuiDialog from "petal-ui/components/dialog"
 import Tabbar from "../../components/tabbar.vue"
+import { ref } from "vue"
+
+const dialogShow = ref(false)
+
+const onAction = (index) => {
+    uni.showToast({
+        title: '点击按钮'+ index,
+        icon: 'error',
+        duration: 2000
+    });
+}
 
 </script>
 
@@ -38,9 +50,19 @@ import Tabbar from "../../components/tabbar.vue"
         </CellGroup>
 
         <CellGroup>
-            <Cell title="设置" icon="petal-icon-settings" is-link/>
+            <Cell title="设置" icon="petal-icon-settings" is-link @click="dialogShow = true"/>
             <Cell title="帮助与客服" icon="petal-icon-detail" is-link/>
         </CellGroup>
+
+        <PuiDialog
+            v-model:show="dialogShow"
+            title="设置"
+            :actions="['取消','确定']"
+            @action="onAction"
+        >
+            测试内容
+        </PuiDialog>
+
         <Tabbar :index="3"/>
     </App>
 </template>
