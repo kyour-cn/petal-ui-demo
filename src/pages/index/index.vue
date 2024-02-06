@@ -20,7 +20,14 @@ import {onPageScroll} from "@dcloudio/uni-app"
 const puiStore = usePetalUiStore()
 
 const setTheme = () => {
-    puiStore.dark = !puiStore.dark
+    puiStore.setDark(!puiStore.dark)
+
+    if(puiStore.dark) {
+        puiStore.setTheme('primary', '#f17217')
+    }else{
+        puiStore.removeTheme('primary')
+    }
+
 }
 
 const tabIndex = ref(0)
@@ -33,6 +40,18 @@ const tabList = ref([
     },
     {
         name: '表单',
+    },
+    {
+        name: '列表',
+    },
+    {
+        name: '卡片',
+    },
+    {
+        name: '弹窗',
+    },
+    {
+        name: '弹窗2',
     },
     {
         name: '列表',

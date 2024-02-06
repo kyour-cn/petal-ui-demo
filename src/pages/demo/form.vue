@@ -18,14 +18,13 @@ import {ref, watch} from "vue";
 const puiStore = usePetalUiStore()
 
 const switchValue = ref(false)
-const isDark = ref(false)
+const isDark = ref(puiStore.dark)
 const sliderValue = ref(20)
 const sliderValue2 = ref(200)
 const textVal = ref("")
 
-
 watch(isDark, (val) => {
-    puiStore.dark = val
+    puiStore.setDark(val)
 })
 
 </script>

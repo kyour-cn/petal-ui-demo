@@ -67,7 +67,7 @@ const onAction = (index) => {
     </App>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 .user-info {
     display: flex;
@@ -75,19 +75,18 @@ const onAction = (index) => {
     width: 100%;
     flex-direction: row;
     align-items: center;
-}
-
-.user-info .avatar {
-    width: 100rpx;
-    height: 100rpx;
-    border-radius: 50%;;
-}
-.user-info .user-name {
-    margin-left: 20rpx;
-    font-weight: bold;
-}
-.user-info .user-setting {
-    margin-left: auto;
+    .avatar {
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50%;;
+    }
+    .user-name {
+        margin-left: 20rpx;
+        font-weight: bold;
+    }
+    .user-setting {
+        margin-left: auto;
+    }
 }
 
 </style>
