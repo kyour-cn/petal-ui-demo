@@ -2,8 +2,7 @@
   font-family: 'petal-icon';
   src:
     url('fonts/petal-icon.ttf?xtcq6p') format('truetype'),
-    url('fonts/petal-icon.woff?xtcq6p') format('woff'),
-    url('fonts/petal-icon.svg?xtcq6p#petal-icon') format('svg');
+    url('fonts/petal-icon.woff?xtcq6p') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
