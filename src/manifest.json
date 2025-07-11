@@ -51,7 +51,7 @@
     /* 小程序特有相关 */
     "mp-weixin" : {
         "appid" : "wxe603fa3b514bfd6e",
-        "libVersion": "latest",
+        "libVersion" : "latest",
         "setting" : {
             "urlCheck" : false
         },
@@ -69,5 +69,21 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "3"
+    "vueVersion" : "3",
+    "app-harmony" : {
+        "distribute" : {
+            "bundleName" : "cn.kyour.petalui",
+            "signingConfigs" : {
+                "default" : {
+                    "certpath" : "c:\\Users\\kyour\\AppData\\Roaming\\HBuilder X\\extensions\\launcher\\agc-certs\\1752221402210.cer",
+                    "keyAlias" : "debugKey",
+                    "keyPassword" : "0000001A6DF46CBCA43E29545F7BE4FF6621CAA1D07BD41B481F461929C8F4FCD9AAE21338A51DDC0D4C",
+                    "profile" : "c:\\Users\\kyour\\AppData\\Roaming\\HBuilder X\\extensions\\launcher\\agc-certs\\1752221402210.p7b",
+                    "signAlg" : "SHA256withECDSA",
+                    "storeFile" : "c:\\Users\\kyour\\AppData\\Roaming\\HBuilder X\\extensions\\launcher\\agc-certs\\1752221402210.p12",
+                    "storePassword" : "0000001A6DF46CBCA43E29545F7BE4FF6621CAA1D07BD41B481F461929C8F4FCD9AAE21338A51DDC0D4C"
+                }
+            }
+        }
+    }
 }
