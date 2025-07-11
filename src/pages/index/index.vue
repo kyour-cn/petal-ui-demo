@@ -74,15 +74,15 @@ const changeTabsPage = (e) => {
 const swiperList = ref([
     {
         title: 'PetalUI',
-        src: 'https://res.vmallres.com/uomcdn/CN/cms/2024-01/ab3fdadeb25c4f708f94ad84e3780d3c.jpg',
+        src: 'https://res.vmallres.com/uomcdn/CN/cms/202506/a963dabe8433413d99aca07592683b73.jpg',
     },
     {
         title: 'PetalUI',
-        src: 'https://res.vmallres.com/uomcdn/CN/cms/2024-01/a053fb3832fb4f7ba3e0f94b4409ed33.jpg',
+        src: 'https://res.vmallres.com/uomcdn/CN/cms/202506/d5f7b01ca4f44c919035ec821fe3b10a.jpg',
     },
     {
         title: 'PetalUI',
-        src: 'https://res.vmallres.com/uomcdn/CN/cms/2023-12/7c158edb67ae46019f8de58e6ed7a865.jpg',
+        src: 'https://res.vmallres.com/uomcdn/CN/cms/202506/8848bc7e80524756a6212ff1e1b1e7a9.jpg',
     },
 ])
 
@@ -131,6 +131,7 @@ onPageScroll((e) => {
 
         <PuiSwiper
             :list="swiperList"
+            list-key="src"
             :item-margin="20"
             :radius="20"
         />
@@ -199,7 +200,9 @@ onPageScroll((e) => {
         </view>
 
         <PuiPopup v-model="shopPopup" :position="popupPosition">
+          <view style="padding-top: 1rem">
             <pui-button size="normal" :block="true" @click="shopPopup = false">关闭弹出层</pui-button>
+          </view>
         </PuiPopup>
 
         <Tabbar :index="1"/>
