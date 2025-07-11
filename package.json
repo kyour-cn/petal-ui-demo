@@ -58,8 +58,7 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-4060620250520001",
     "petal-ui": "^0.0.6",
     "pinia": "^3.0.3",
-    "vue": "^3.4.21",
-    "vue-i18n": "^9.1.9"
+    "vue": "^3.4.21"
   },
   "devDependencies": {
     "@dcloudio/types": "^3.4.8",
